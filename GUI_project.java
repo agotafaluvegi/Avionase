@@ -35,36 +35,44 @@ public class GUI_project extends JFrame {
         contentPane.setPreferredSize(new Dimension(500,400));
         contentPane.setBackground(new Color(192,192,192));
 
+        for(int i = 0; i<=6; i++)
+        {
+            for(int j = 0; j<=6; j++)
+            {
+                board[i][j] = new JButton();
+                board[i][j].setBounds((47 + 20 * i),(26 + 20 * j),20,20);
+                board[i][j].setBackground(new Color(192,192,192));
+                board[i][j].setForeground(new Color(0,0,0));
+                board[i][j].setEnabled(true);
+                board[i][j].setFont(new Font("sansserif",0,12));
+                board[i][j].setText("");
+                board[i][j].setVisible(true);
+                //adding components to contentPane panel
+                contentPane.add(board[i][j]);
+            }
+        }
 
-        board[0][0] = new JButton();
-        board[0][0].setBounds(47,26,20,20);
-        board[0][0].setBackground(new Color(192,192,192));
-        board[0][0].setForeground(new Color(0,0,0));
-        board[0][0].setEnabled(true);
-        board[0][0].setFont(new Font("sansserif",0,12));
-        board[0][0].setText("");
-        board[0][0].setVisible(true);
+        
 
-        board[0][1] = new JButton();
-        board[0][1].setBounds(67,26,20,20);
-        board[0][1].setBackground(new Color(214,217,223));
-        board[0][1].setForeground(new Color(0,0,0));
-        board[0][1].setEnabled(true);
-        board[0][1].setFont(new Font("sansserif",0,12));
-        board[0][1].setText("");
-        board[0][1].setVisible(true);
+        // board[0][1] = new JButton();
+        // board[0][1].setBounds(67,26,20,20);
+        // board[0][1].setBackground(new Color(214,217,223));
+        // board[0][1].setForeground(new Color(0,0,0));
+        // board[0][1].setEnabled(true);
+        // board[0][1].setFont(new Font("sansserif",0,12));
+        // board[0][1].setText("");
+        // board[0][1].setVisible(true);
         //Set methods for mouse events
         //Call defined methods
-        board[0][1].addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                clicked(evt);
-            }
-        });
+        //board[0][1].addMouseListener(new MouseAdapter() {
+          //  public void mouseClicked(MouseEvent evt) {
+            //    clicked(evt);
+           // }
+        //});
 
 
-        //adding components to contentPane panel
-        contentPane.add(board[0][0]);
-        contentPane.add(board[0][1]);
+        
+        //contentPane.add(board[0][1]);
 
         //adding panel to JFrame and seting of window position and close operation
         getContentPane().add(contentPane);
