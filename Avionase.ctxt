@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=name\ size
+comment0.target=Avionase(java.lang.String,\ int)
+comment1.params=
+comment1.target=java.util.ArrayList\ getLocations()
+comment2.params=
+comment2.target=int\ getSize()
+comment3.params=locationToSet
+comment3.target=void\ setLocation(java.util.ArrayList)
+comment4.params=guess
+comment4.target=java.lang.String\ check(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getName()
+numComments=6
