@@ -47,32 +47,17 @@ public class GUI_project extends JFrame {
                 board[i][j].setFont(new Font("sansserif",0,12));
                 board[i][j].setText("");
                 board[i][j].setVisible(true);
+                board[i][j].addMouseListener(new MouseAdapter() {
+                   public void mouseClicked(MouseEvent evt) {
+                       setBackground(new Color(0,192,192));
+                       clicked(evt);
+                   }
+                });
                 //adding components to contentPane panel
                 contentPane.add(board[i][j]);
             }
         }
-
         
-
-        // board[0][1] = new JButton();
-        // board[0][1].setBounds(67,26,20,20);
-        // board[0][1].setBackground(new Color(214,217,223));
-        // board[0][1].setForeground(new Color(0,0,0));
-        // board[0][1].setEnabled(true);
-        // board[0][1].setFont(new Font("sansserif",0,12));
-        // board[0][1].setText("");
-        // board[0][1].setVisible(true);
-        //Set methods for mouse events
-        //Call defined methods
-        //board[0][1].addMouseListener(new MouseAdapter() {
-          //  public void mouseClicked(MouseEvent evt) {
-            //    clicked(evt);
-           // }
-        //});
-
-
-        
-        //contentPane.add(board[0][1]);
 
         //adding panel to JFrame and seting of window position and close operation
         getContentPane().add(contentPane);
@@ -82,9 +67,11 @@ public class GUI_project extends JFrame {
         setVisible(true);
     }
 
-    //Method mouseClicked for button2
+    //Method mouseClicked for buttons
     private void clicked (MouseEvent evt) {
             //TODO
+            System.out.println("Helloworld");
+            setBackground(new Color(0,192,192));
     }
 
     //method for generate menu
