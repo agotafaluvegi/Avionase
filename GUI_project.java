@@ -49,7 +49,8 @@ public class GUI_project extends JFrame {
                 board[i][j].setVisible(true);
                 board[i][j].addMouseListener(new MouseAdapter() {
                    public void mouseClicked(MouseEvent evt) {
-                       setBackground(new Color(0,192,192));
+                       board[0][0].setBackground(new Color(255,255,255));
+                       contentPane.add(board[0][0]);
                        clicked(evt);
                    }
                 });
